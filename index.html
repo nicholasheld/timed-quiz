@@ -4,28 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Timed Quiz</title>
+    <title>Timed Javascript Quiz</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <h1>Timed Quiz</h1>
+        <h1>Timed Javascript Quiz</h1>
       </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
+      <div class="timer">
+        <h1>countdown area</h1>
+        <div class="question">
+          <h2>From the given array which index is the letter 'b' on? ['a','b','c','d']</h2>
         </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+        <div class="answers">
+       <ul>
+         <ol>Bubble A - 3</ol>
+         <ol>Bubble B - 2</ol>
+         <ol>Bubble C - 1</ol>
+         <ol>Bubble D - 0</ol>
+       </ul>
+        <div class="submit">
+          <button id="submit" class="btn">Submit Answer</button>
         </div>
       </div>
     </div>
