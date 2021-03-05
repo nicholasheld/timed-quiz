@@ -8,27 +8,33 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="wrapper">
       <header>
-        <h1>Timed Javascript Quiz</h1>
+        <h1><strong>Timed Javascript Quiz</strong></h1>
+        <div class="timer">
+          <h2>Seconds Remaining: <span id = "count"></span></h2>
       </header>
-      <div class="timer">
-        <h1>countdown area</h1>
-        <div class="question">
-          <h2>From the given array which index is the letter 'b' on? ['a','b','c','d']</h2>
-        </div>
-        <div class="answers">
-       <ul>
-         <ol>Bubble A - 3</ol>
-         <ol>Bubble B - 2</ol>
-         <ol>Bubble C - 1</ol>
-         <ol>Bubble D - 0</ol>
-       </ul>
-        <div class="submit">
-          <button id="submit" class="btn">Submit Answer</button>
-        </div>
-      </div>
+      <div id = instructions>
+      <p><strong>Instructions: This is a timed coding quiz with multiple-choice questions about Javascript basics. 
+        There are six multiple choice questions. Every wrong answer will incur a 5 second penalty.
+        You will be given 120 seconds to complete and the timer will start the countdown once the start button is clicked. 
+        The quiz will be ended if completed or if the timer expires before finishing. 
+        Enter your initials and score. Press the button to begin</strong></p>
     </div>
+      <div class="start">
+        <button id="start" class="btn">Start</button>
+      </div>
+      
+        <div class="question">
+          <h3>From the given array which index is the letter 'b' on? ['a','b','c','d']</h3>
+        </div>
+          
+       <ul id = "answers">
+         <li>Radio Button - Bubble A - 3</li>
+         <li>Bubble B - 2</li>
+         <li>Bubble C - 1</li>
+         <li>Bubble D - 0</li>
+       </ul>
+
     <script src="script.js"></script>
   </body>
 </html>

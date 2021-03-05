@@ -1,11 +1,11 @@
-h1{
-    text-align:center;
+* {
+    box-sizing: border-box;
+  }
+body{
+    text-align: center;
+    background-color: lightgrey;
 }
 
-h2{
-    text-align: center;
-}
-
-.question   {
-    text-align: center;
+p{
+    margin:80px;
 }
