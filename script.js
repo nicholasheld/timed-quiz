@@ -1,25 +1,70 @@
 //jss
-var timer = 120
-var timerStart = document.querySelector("#start");
-var countE1 = document.querySelector(".count");
-//submitE1 = document.querySelector(#submit); submit final results with initials
+var timerElement = document.querySelector(".timer-count");
+var timerStart = document.querySelector(".start");
+var countE1 = document.querySelector("#count");
+//var lose = document.querySelector(".lose");  //time runs out
+//var resultE1 = document.querySelector("#result") 
+//var submitE1 = document.querySelector("#submit"); submit final results with initials
+
+var timer;
+var timerCount;
+var blanksLetters = [];
+
 timerStart.addEventListener("click", function () {
 
     instructions.style.visibility = "hidden";
     start.style.visibility = "hidden";
-
-    countDown();
+    timerCount = 120;
+    startTimer()
 });
-var countDown = function (timer) {
+
+function startTimer() {
+    // Sets timer
+    timer = setInterval(function() {
+      timerCount--;
+      timerElement.textContent = timerCount;
+      //if (timerCount >= 0) {
+        // Tests if win condition is met
+       // if (isWin && timerCount > 0) {
+          // Clears interval and stops timer
+         // clearInterval(timer);
+          //winGame();
+      //  }
+     // }
+      // Tests if time has run out
+      if (timerCount === 0) {
+        // Clears interval
+        clearInterval(timer);
+        loseGame();
+      }
+    }, 1000);
+  }
+
+/*
+var countDown = function (timer) { this is not working for me
 
     for (i = timer; i > 0; i--) {
         countDown(timer);
         console.log(i);
         countE1.textContent = count;
-    }
-};
+    }1000
+};  */
+function loseGame() {
+    wordBlank.textContent = "Out of Time!";
+    startButton.disabled = false;
+    setLosses()
+  }
+//append the question and multiple choice upon selection
 
-//submitE1.addEventListener("click, initials")
+//if user gets answer correct store true or plus one in local storage
+//once quiz is completed sum the ones or count the trues /6 for a percentage
+//function addTotal(result) review API days 2 31 minutes in
+//
+
+//have the user enter their initials next to displayed score
+
+//event.preventDefault(); //until initials have been entered
+//submitE1.addEventListener("click, initials") // user submits initials
 
 /*
 1C From the given array which index is the letter 'b' on? ['a', 'b', 'c', 'd'] *

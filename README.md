@@ -6,6 +6,7 @@ There are six multiple choice questions. The user is given 120 seconds to comple
 
 When the user finishes the quiz or the timer ends, the user can enter their initials and score.
 
-gethub link:
+gethub link: https://nicholasheld.github.io/timed-quiz/
+github: https://github.com/nicholasheld/timed-quiz
 
 screenshot:
