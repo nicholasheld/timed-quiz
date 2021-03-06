@@ -2,6 +2,7 @@
 var timerElement = document.querySelector(".timer-count");
 var timerStart = document.querySelector(".start");
 var countE1 = document.querySelector("#count");
+var questionKey = document.querySelector(".questionKey");
 //var lose = document.querySelector(".lose");  //time runs out
 //var resultE1 = document.querySelector("#result") 
 //var submitE1 = document.querySelector("#submit"); submit final results with initials
@@ -15,37 +16,39 @@ timerStart.addEventListener("click", function () {
     instructions.style.visibility = "hidden";
     start.style.visibility = "hidden";
     //hidden visibility does not work so have to append
+    questionKey.style.visibility = "visible";
     timerCount = 120;
     startTimer()
 });
 
 function startTimer() {
     // Sets timer
-    timer = setInterval(function() {
-      timerCount--;
-      timerElement.textContent = timerCount;
-      //if (timerCount >= 0) {
+    timer = setInterval(function () {
+        timerCount--;
+        timerElement.textContent = timerCount;
+        //if (timerCount >= 0) {
         // Tests if win condition is met
-       // if (isWin && timerCount > 0) {
-          // Clears interval and stops timer
-         // clearInterval(timer);
-          //winGame();
-      //  }
-     // }
-      // Tests if time has run out
-      if (timerCount === 0) {
-        // Clears interval
-        clearInterval(timer);
-        loseGame();
-      }
+        // if (isWin && timerCount > 0) {
+        // Clears interval and stops timer
+        // clearInterval(timer);
+        //winGame();
+        //  }
+        // }
+        // Tests if time has run out
+        if (timerCount === 0) {
+            // Clears interval
+            clearInterval(timer);
+            loseGame();
+            //TODO: if answer is wrong subtract 5 seconds
+        }
     }, 1000);
-  }
+}
 
 function loseGame() {
     wordBlank.textContent = "Out of Time!";
     startButton.disabled = false;
     setLosses()
-  }
+}
 //append the question and multiple choice upon selection
 
 //if user gets answer correct store true or plus one in local storage
