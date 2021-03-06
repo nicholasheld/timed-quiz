@@ -14,6 +14,7 @@ timerStart.addEventListener("click", function () {
 
     instructions.style.visibility = "hidden";
     start.style.visibility = "hidden";
+    //hidden visibility does not work so have to append
     timerCount = 120;
     startTimer()
 });
@@ -40,15 +41,6 @@ function startTimer() {
     }, 1000);
   }
 
-/*
-var countDown = function (timer) { this is not working for me
-
-    for (i = timer; i > 0; i--) {
-        countDown(timer);
-        console.log(i);
-        countE1.textContent = count;
-    }1000
-};  */
 function loseGame() {
     wordBlank.textContent = "Out of Time!";
     startButton.disabled = false;

@@ -12,8 +12,7 @@
 <body>
   <header>
     <h1><strong>Timed Javascript Quiz</strong></h1>
-    <div class="timer-count">120</div>
-      <h2>Seconds Remaining</h2>
+    <div class="timer-count">Seconds remaining: 120</div>
   </header>
   <div id=instructions>
     <p><strong>Instructions: This is a timed coding quiz with multiple-choice questions about Javascript basics.
@@ -26,17 +25,26 @@
   <div class="start">
     <button id="start" class="btn">Start</button>
   </div>
-
   <div class="question">
     <h3>From the given array which index is the letter 'b' on? ['a','b','c','d']</h3>
   </div>
+  <hr>
+  <div id="answers"> </div>
+    <div id = "answerA">
+      <input type = "radio"><span>This is A that would get appended</span>
+     </div>
 
-  <ul id="answers">
-    <li> <input type="radio"><span>This is A that would get appended</span></li>
-    <li> <input type="radio"><span>This is B that would get appended</span></li>
-    <li>Bubble C - 1</li>
-    <li>Bubble D - 0</li>
-  </ul>
+     <div id = "answerB">
+      <input type = "radio"><span>This is B that would get appended</span>
+     </div>
+
+     <div id = "answerC">
+      <input type = "radio"><span>This is C that would get appended</span>
+     </div>
+
+     <div id = "answerD">
+      <input type = "radio"><span>This is D that would get appended</span>
+     </div>
 
   <script src="script.js"></script>
 </body>
